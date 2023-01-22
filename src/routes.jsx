@@ -21,7 +21,7 @@ const routes = createBrowserRouter([
         element: <Login />
     },
     {
-        path:"/admin",
+        path:"/",
         element:<AdminLayout />,
         children:[
             {
