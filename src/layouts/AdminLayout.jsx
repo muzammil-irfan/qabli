@@ -125,36 +125,36 @@ const navList = [
   {
     label: "Products",
     icon: MdOutlineInventory,
-    href: "/admin/product/",
+    href: "/product",
   },
   {
     label: "Listing Approval",
     icon: BiBorderRight,
-    href: "/admin/listing/",
+    href: "/listing",
   },
   {
     label: "Order Tracking",
     icon: MdTrackChanges,
-    href: "/admin/order/",
+    href: "/order",
   },
   {
     label: "Offers",
     icon: HiOutlineCash,
-    href: "/admin/offer/",
+    href: "/offer",
   },
   {
     label: "Commissions",
     icon: RiCoupon3Line,
-    href: "/admin/commission/",
+    href: "/commission",
   },
   {
     label: "Vendors",
     icon: MdOutlineInventory,
-    href: "/admin/vendor/",
+    href: "/vendor",
   },
   {
     label: "Users",
     icon: MdOutlineAdminPanelSettings,
-    href: "/admin/user/",
+    href: "/user",
   },
 ];

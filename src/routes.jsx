@@ -25,7 +25,7 @@ const routes = createBrowserRouter([
         element:<AdminLayout />,
         children:[
             {
-                path:"dashboard",
+                path:"/",
                 element: <AdminDashboard />
             },
             {
