@@ -1,8 +1,6 @@
 import {
   Box,
-  Paper,
-  Button,
-  InputBase,
+  Paper,  
   IconButton,
   SvgIcon,
   Typography,
@@ -10,19 +8,11 @@ import {
   Badge,
 } from "@mui/material";
 import React from "react";
-import LogoutIcon from "@mui/icons-material/Logout";
-import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
-import CropFreeIcon from "@mui/icons-material/CropFree";
-import ExpandMore from "@mui/icons-material/ExpandMore";
+import {Link} from "react-router-dom"
+export default function TopHeader({ logo }) {
 
-export default function TopHeader({ searchBar }) {
-  const handleLogout = () => {
-    console.log("logout");
-  };
   return (
     <Paper
       sx={{
@@ -32,14 +22,20 @@ export default function TopHeader({ searchBar }) {
         p: 1,
       }}
     >
-      <Box />
+      <Box >
+        {
+          logo && <Link to="/"><Typography variant="h4" color="black" fontWeight="bold">Qabli</Typography></Link>
+        }
+      </Box>
       <Box display="flex">
         {iconList.map((item, index) => (
+          <Link to={item.href} target={item.href==="/chat" ? "_blank":"none"}>
           <IconButton aria-label={item.href} key={index}>
             <Badge badgeContent={4} color="primary">
               <SvgIcon component={item.icon} />
             </Badge>
           </IconButton>
+          </Link>
         ))}
         <Box display="flex" gap={1} px={1} alignItems="center">
           <Avatar
@@ -64,7 +60,7 @@ const iconList = [
     icon: NotificationsNoneIcon,
   },
   {
-    href: "/",
+    href: "/chat",
     icon: ChatBubbleOutlineOutlinedIcon,
   },
 ];

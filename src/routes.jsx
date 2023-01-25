@@ -10,6 +10,7 @@ import AdminOffer from "./pages/admin/Offer";
 import AdminOrder from "./pages/admin/Order";
 import AdminListing from "./pages/admin/Listing";
 import AdminUser from "./pages/admin/User";
+import AdminChat from "./pages/admin/Chat";
 
 const routes = createBrowserRouter([
     {
@@ -55,9 +56,14 @@ const routes = createBrowserRouter([
             {
                 path:"user",
                 element: <AdminUser />
-            }
+            },
+            
         ]
     },
+    {
+        path:"chat",
+        element: <AdminChat />
+    }
     
 ])
 
